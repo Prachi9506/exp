@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Study Planner</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="tasks.html" class="active">Tasks</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="timer.html">Study Timer</a></li>
+            <li><a href="notes.html">Notes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section full-width">
+            <h2>Task Management</h2>
+            <div class="task-controls">
+                <button id="addTaskBtn" class="primary-btn">Add New Task</button>
+                <div class="task-filters">
+                    <select id="priorityFilter">
+                        <option value="all">All Priorities</option>
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="low">Low Priority</option>
+                    </select>
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="taskForm" class="task-form hidden">
+                <form>
+                    <input type="text" id="taskInput" placeholder="Enter task" required>
+                    <input type="date" id="taskDate" required>
+                    <select id="taskPriority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <textarea id="taskDescription" placeholder="Task description (optional)"></textarea>
+                    <div class="form-buttons">
+                        <button type="submit" class="primary-btn">Add Task</button>
+                        <button type="button" id="cancelTask" class="secondary-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+        </div>
+    </div>
+    <script src="tasks.js"></script>
+</body>
+</html>

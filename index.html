@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Study Planner</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="timer.html">Study Timer</a></li>
+            <li><a href="notes.html">Notes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to Your Study Planner</h1>
+            <p>Track your progress, manage tasks, and stay organized!</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="section">
+                <h2>Today's Tasks</h2>
+                <div id="todayTasks" class="task-preview"></div>
+            </div>
+
+            <div class="section">
+                <h2>Progress Overview</h2>
+                <div class="progress-container">
+                    <div id="progressBar"></div>
+                    <span id="progressText">0% Complete</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Quick Timer</h2>
+                <div id="timer">25:00</div>
+                <div class="timer-controls">
+                    <button id="startTimer">Start</button>
+                    <button id="resetTimer">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

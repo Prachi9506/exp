@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Study Planner</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="calendar.html" class="active">Calendar</a></li>
+            <li><a href="timer.html">Study Timer</a></li>
+            <li><a href="notes.html">Notes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section full-width">
+            <h2>Study Calendar</h2>
+            <div class="calendar-controls">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h3 id="monthDisplay"></h3>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="month">Month</button>
+                    <button class="view-btn" data-view="week">Week</button>
+                    <button class="view-btn" data-view="day">Day</button>
+                </div>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-grid" id="calendarDays">
+                    <!-- Calendar will be rendered here -->
+                </div>
+                <div class="event-list">
+                    <h3>Events & Tasks</h3>
+                    <div id="selectedDateEvents" class="selected-date-events">
+                        <p class="no-events">Select a date to view events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calendar.js"></script>
+</body>
+</html>
